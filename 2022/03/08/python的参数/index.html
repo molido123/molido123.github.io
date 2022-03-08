@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>python的参数 | ayano</title><meta name="keywords" content="基础操作"><meta name="author" content="yakui"><meta name="copyright" content="yakui"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="今天python人工智障大水课老师给我们讲了一堆跟人工智能不沾边的玩意，但是确实是python的基础操作，有点触及我的知识盲区了。呜呜，python的参数的确是够特性的。 python的参数类型 位置参数(positional arguments，官方定义，就是其他语言所说的参数)   默认参数（被默认赋值的参数）  可变参数  命名关键字参数  关键字参数   位置参数的特性位置(参数pos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python的参数">
+<meta property="og:url" content="https://ayanobestsister.xyz/2022/03/08/python%E7%9A%84%E5%8F%82%E6%95%B0/index.html">
+<meta property="og:site_name" content="ayano">
+<meta property="og:description" content="今天python人工智障大水课老师给我们讲了一堆跟人工智能不沾边的玩意，但是确实是python的基础操作，有点触及我的知识盲区了。呜呜，python的参数的确是够特性的。 python的参数类型 位置参数(positional arguments，官方定义，就是其他语言所说的参数)   默认参数（被默认赋值的参数）  可变参数  命名关键字参数  关键字参数   位置参数的特性位置(参数pos">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ayanobestsister.xyz/img/113.png">
+<meta property="article:published_time" content="2022-03-08T13:56:13.348Z">
+<meta property="article:modified_time" content="2022-03-08T15:39:44.753Z">
+<meta property="article:author" content="yakui">
+<meta property="article:tag" content="基础操作">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ayanobestsister.xyz/img/113.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://ayanobestsister.xyz/2022/03/08/python%E7%9A%84%E5%8F%82%E6%95%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'python的参数',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-08 23:39:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/xxx.css"><meta name="generator" content="Hexo 6.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/02/06/amy4rCJcYbijKfn.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> music</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 俺的神仙朋友们</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于本弱鸡</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/113.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ayano</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> music</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 俺的神仙朋友们</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于本弱鸡</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">python的参数</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-08T13:56:13.348Z" title="发表于 2022-03-08 21:56:13">2022-03-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-08T15:39:44.753Z" title="更新于 2022-03-08 23:39:44">2022-03-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/python/">python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="python的参数"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>  今天python人工智障大水课老师给我们讲了一堆跟人工智能不沾边的玩意，但是确实是python的基础操作，有点触及我的知识盲区了。呜呜，python的参数的确是够特性的。</p>
+<h3 id="python的参数类型"><a href="#python的参数类型" class="headerlink" title="python的参数类型"></a>python的参数类型</h3><ul>
+<li><p>位置参数(positional arguments，官方定义，就是其他语言所说的参数) </p>
+</li>
+<li><p>默认参数（被默认赋值的参数）</p>
+</li>
+<li><p>可变参数</p>
+</li>
+<li><p>命名关键字参数</p>
+</li>
+<li><p>关键字参数</p>
+</li>
+</ul>
+<h2 id="位置参数的特性"><a href="#位置参数的特性" class="headerlink" title="位置参数的特性"></a>位置参数的特性</h2><p>位置(参数positional arguments)就是其他语言的参数，其他语言没有分参数的种类是因为只有这一种参数，所有参数都遵循按位置一一对应的原则。</p>
+<h2 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h2><p>没什么特性，但有几点注意</p>
+<p>默认参数必须处于<strong>最右端</strong>，否者会产生二义性</p>
+<p>还有一点需注意</p>
+<p><strong>python的解释器将默认参数当作一个公共对象，如果函数内部修改了它，那么再次调用时默认参数将改变</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">def defaultzero(list = []):  #我们的本意是提供的list参数为0时 返回只有一个0的list</span><br><span class="line">    list.append(0)</span><br><span class="line">    return list</span><br><span class="line"><span class="meta">&gt;</span><span class="language-bash">&gt;&gt; defaultzero()</span></span><br><span class="line">[0]</span><br><span class="line"><span class="meta">&gt;</span><span class="language-bash">&gt;&gt; defaultzero()</span></span><br><span class="line">[0, 0]</span><br><span class="line"><span class="meta">#</span><span class="language-bash">显然重复调用的时候结果不是我们所期望的</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">解决方案 使用None</span></span><br><span class="line">def defaultzero(list = None):  </span><br><span class="line">    if list = None: list = []</span><br><span class="line">    list.append(0)</span><br><span class="line">    return list</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">这说明list是一个对象</span> </span><br><span class="line"><span class="meta">#</span><span class="language-bash">事实上Python所有的数据类型其实都是对象(先记住这点，后面的博文将给出详细解释)</span></span><br><span class="line">摘自于https://cloud.tencent.com/developer/article/1037232</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>使用于<strong>未知个数</strong>的参数</p>
+<p>可变参数由<strong>tuple</strong>形式传播</p>
+<p>格式【 *<strong>参数</strong>】</p>
+<p>使用该参数的函数可以将整个元组或者列表传进来，但是必须顺序得提前规划好</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def xxx(*param):</span><br><span class="line"><span class="meta">  #</span><span class="language-bash"><span class="comment">#########</span></span></span><br><span class="line"><span class="meta">  #</span><span class="language-bash"><span class="comment">###########</span></span></span><br><span class="line">  </span><br><span class="line"> list=[]</span><br><span class="line"> 调用时</span><br><span class="line"> xxx(list)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h2><p>关键字的参数是由字典形式传递的</p>
+<p>即可变参数传递的是参数值，关键字参数传递的是参数名:参数值键值对</p>
+<p>形式：<code>**kw</code> 这是惯用写法，建议使用，容易被理解</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">personinfo</span>(<span class="params">name, age, **kw</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;name:&#x27;</span>, name, <span class="string">&#x27;age:&#x27;</span>, age, <span class="string">&#x27;ps:&#x27;</span>, kw)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>personinfo(<span class="string">&#x27;Steve&#x27;</span>, <span class="number">22</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>personinfo(<span class="string">&#x27;Lily&#x27;</span>, <span class="number">23</span>, city = <span class="string">&#x27;Shanghai&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>personinfo(<span class="string">&#x27;Leo&#x27;</span>, <span class="number">23</span>, gender = <span class="string">&#x27;male&#x27;</span>,city = <span class="string">&#x27;Shanghai&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>可变参数和关键字参数都可以接受0个或者多个参数</strong></p>
+<h2 id="命名关键字参数"><a href="#命名关键字参数" class="headerlink" title="命名关键字参数"></a>命名关键字参数</h2><p>Python的命名关键字参数对传入的关键字参数做了进一步的限制。</p>
+<p>格式：在关键字参数前增加一个”*”。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">personinfo</span>(<span class="params">name, age, *, gender, city</span>): <span class="comment">#只能传gender和city参数</span></span><br></pre></td></tr></table></figure>
+
+<p>关键字参数和命名关键字参数的区别在于，</p>
+<p><strong>前者可以传递任何名字的参数，而后者只能传递*后面名字的参数。</strong></p>
+<p>如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符*了</p>
+<h2 id="各种参数的组合"><a href="#各种参数的组合" class="headerlink" title="各种参数的组合"></a>各种参数的组合</h2><p>顺序：基本参数、默认参数、可变参数、命名关键字参数和关键字参数。</p>
+<p>总而言之</p>
+<p>python的参数类型可粗分为三类</p>
+<p>基本参数，命名关键字参数和关键字参数。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">yakui</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ayanobestsister.xyz/2022/03/08/python%E7%9A%84%E5%8F%82%E6%95%B0/">https://ayanobestsister.xyz/2022/03/08/python%E7%9A%84%E5%8F%82%E6%95%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ayanobestsister.xyz" target="_blank">ayano</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">基础操作</a></div><div class="post_share"><div class="social-share" data-image="/img/113.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/03/06/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/113.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">后端开发遇到的诸多问题（跨域，https，数据格式）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/02/06/amy4rCJcYbijKfn.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">yakui</div><div class="author-info__description">这是一个菜鸡的博客</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/molido123"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/molido123" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3391394571@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E7%9A%84%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">python的参数类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-number"></span> <span class="toc-text">位置参数的特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="toc-number"></span> <span class="toc-text">默认参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="toc-number"></span> <span class="toc-text">可变参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0"><span class="toc-number"></span> <span class="toc-text">关键字参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0"><span class="toc-number"></span> <span class="toc-text">命名关键字参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E5%8F%82%E6%95%B0%E7%9A%84%E7%BB%84%E5%90%88"><span class="toc-number"></span> <span class="toc-text">各种参数的组合</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/08/python%E7%9A%84%E5%8F%82%E6%95%B0/" title="python的参数"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/113.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python的参数"/></a><div class="content"><a class="title" href="/2022/03/08/python%E7%9A%84%E5%8F%82%E6%95%B0/" title="python的参数">python的参数</a><time datetime="2022-03-08T13:56:13.348Z" title="发表于 2022-03-08 21:56:13">2022-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/06/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/" title="后端开发遇到的诸多问题（跨域，https，数据格式）"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/113.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="后端开发遇到的诸多问题（跨域，https，数据格式）"/></a><div class="content"><a class="title" href="/2022/03/06/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%82%9F/" title="后端开发遇到的诸多问题（跨域，https，数据格式）">后端开发遇到的诸多问题（跨域，https，数据格式）</a><time datetime="2022-03-06T12:51:40.356Z" title="发表于 2022-03-06 20:51:40">2022-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/06/%E4%B8%80%E4%B8%AA%E6%AF%94%E8%BE%83%E5%A5%BD%E7%94%A8%E7%9A%84jwt%E5%BA%93/" title="一个比较好用的jwt库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/113.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一个比较好用的jwt库"/></a><div class="content"><a class="title" href="/2022/03/06/%E4%B8%80%E4%B8%AA%E6%AF%94%E8%BE%83%E5%A5%BD%E7%94%A8%E7%9A%84jwt%E5%BA%93/" title="一个比较好用的jwt库">一个比较好用的jwt库</a><time datetime="2022-03-06T08:57:46.197Z" title="发表于 2022-03-06 16:57:46">2022-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/14/%E7%BD%AA%E4%BA%BA/" title="罪人"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/113.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="罪人"/></a><div class="content"><a class="title" href="/2022/02/14/%E7%BD%AA%E4%BA%BA/" title="罪人">罪人</a><time datetime="2022-02-14T02:52:56.155Z" title="发表于 2022-02-14 10:52:56">2022-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/07/%E4%BB%8A%E6%97%A5%E5%88%B7%E5%88%B0%E7%9A%84%E9%AC%BC%E7%95%9C%E8%A7%86%E9%A2%91/" title="今日刷到的生草视频"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/113.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="今日刷到的生草视频"/></a><div class="content"><a class="title" href="/2022/02/07/%E4%BB%8A%E6%97%A5%E5%88%B7%E5%88%B0%E7%9A%84%E9%AC%BC%E7%95%9C%E8%A7%86%E9%A2%91/" title="今日刷到的生草视频">今日刷到的生草视频</a><time datetime="2022-02-07T10:37:58.943Z" title="发表于 2022-02-07 18:37:58">2022-02-07</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/113.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By yakui</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,100,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
